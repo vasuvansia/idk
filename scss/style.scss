@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700&display=swap");
+* {
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 16px;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+//  Weights: 500, 700, 900
+
+// ## Colors
+
+// ### Primary
+
+$Paleblue: hsl(225, 100%, 94%);
+$Brightblue: hsl(245, 75%, 52%);
+
+//###Neutral
+
+$Verypaleblue: hsl(225, 100%, 98%); 
+$Desaturatedblue: hsl(224, 23%, 55%);
+$Darkblue: hsl(223, 47%, 23%);
+
+body {
+    background-color: $Verypaleblue;
+    background-image: url("../images/pattern-background-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    @media screen and (min-width: 376px) {
+        background-image: url("../images/pattern-background-desktop.svg");
+        background-position: top -10vh left 0px;
+    }
+}
+.outmain {
+    margin: 0px 20px;
+    @media screen and (min-width: 376px) {
+        height: 100vh;
+        display: flex;
+         justify-content: center;
+        align-items: center;
+        align-content: center;
+        align-self: center;
+       
+    }
+}
+.main {
+    // margin: 50px 20px;
+    overflow: hidden;
+    border-radius: 15px;
+    background-color: white;
+    max-width: 375px;
+}
+.hero {
+    max-height: 200px;
+}
+.contaier {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    padding: 0px 20px;
+}
+h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+p {
+    color: $Desaturatedblue;
+}
+.discription {
+    margin-bottom: 16px;
+}
+.card {
+    background-color: $Verypaleblue;
+    padding: 18px;
+    margin-bottom: 12px;
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    .cardleft {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        align-items: center;
+    }
+    img {
+        background-color: $Paleblue;
+        border-radius: 50%;
+    }
+    .heading {
+        color: $Darkblue;
+        font-weight: 700;
+    }
+    a {
+        color: $Brightblue;
+        font-weight: 500;
+        &:hover {
+            text-decoration: none;
+            cursor: pointer;
+            color: $Darkblue;
+        }
+    }
+    //cards end here
+}
+
+button {
+    width: 100%;
+    padding: 15px 0px;
+    margin-bottom: 20px;
+    color: white;
+    font-weight: 700;
+    background-color: $Brightblue;
+    border-radius: 15px;
+    border: none;
+    // box-shadow: ;
+    &:hover {
+        background-color: $Darkblue;
+        cursor: pointer;
+    }
+}
+.cancellink {
+    text-decoration: none;
+    color: $Desaturatedblue;
+    font-weight: 700;
+    &:hover {
+        cursor: pointer;
+        color: $Darkblue;
+    }
+}
